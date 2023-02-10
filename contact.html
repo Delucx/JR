@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Next Level - Contact</title>
+<!--
+Next Level CSS Template
+https://templatemo.com/tm-532-next-level
+-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="templatemo-style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row tm-brand-row">
+        <div class="col-lg-8 col-2 tm-nav-col">
+          <div class="tm-nav">
+            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto mr-0">
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="about.html"> About</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item active">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="tm-nav-link-highlight"></div>
+                    <a class="nav-link" href="article.html">Article</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="row tm-welcome-row">
+        <div class="col-12">
+          <div class="tm-welcome-parallax tm-center-child" data-parallax="scroll" data-image-src="contact.jpg">
+            <div class="tm-bg-black-transparent tm-parallax-overlay">
+              <h1>Contact</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="row tm-pt-4 tm-mb-3">
+        <div class="col-12 tm-page-cols-container">
+          <div class="tm-page-col-left">
+            <div class="tm-contact-container tm-mb-6">
+              <div class="tm-address-container">
+                <h2 class="tm-text-secondary tm-mb-6">Address</h2>
+                <address>
+                  <p>
+                    1768 Thomas Street<br />
+                    Hoffman Estates<br />
+                    Illinois 60195
+                  </p>
+                </address>
+              </div>
+
+              <div class="tm-location-container">
+                <div class="mapouter">
+                  <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas"
+                      src="https://maps.google.com/maps?q=Manila&t=&z=8&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no"
+                      marginheight="0" marginwidth="0"></iframe><br>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="tm-page-col-right tm-form-container">
+            <h2 class="tm-text-secondary mb-4">Contact Us</h2>
+            <div class="row">
+              <div class="right-content">
+                <div class="container">
+                  <form id="contact" action="" method="post">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <fieldset>
+                          <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-md-6">
+                        <fieldset>
+                          <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                            required=""></textarea>
+                        </fieldset>
+                      </div>
+                      <div class="col-md-12">
+                        <fieldset>
+                          <button type="submit" id="form-submit" class="button">
+                            Send Message
+                          </button>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page footer -->
+      <footer class="row tm-page-footer">
+        <p class="col-12 tm-copyright-text mb-0">
+          Copyright &copy; 2019 Next Level Company... Designed by Template Mo
+        </p>
+      </footer>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="parallax.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+      $(document).on("change", ":file", function() {
+        var input = $(this),
+          numFiles = input.get(0).files ? input.get(0).files.length : 1,
+          label = input
+            .val()
+            .replace(/\\/g, "/")
+            .replace(/.*\//, "");
+        input.trigger("fileselect", [numFiles, label]);
+      });
+
+      $(document).ready(function() {
+        $(":file").on("fileselect", function(event, numFiles, label) {
+          $("#file_name_label").attr("placeholder", label);
+        });
+      });
+    </script>
+  </body>
+</html>
